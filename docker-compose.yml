@@ -3,7 +3,7 @@ services:
   mysql:
     image: mysql:5.7
     ports:
-      - "8889:3306"
+      - "3306:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=empleados
@@ -30,7 +30,7 @@ services:
     #image: php:7.4-apache
     #container_name: docker-php
     ports:
-      - "80:80"
+      - "8080:80"
     volumes:
       - ./www:/var/www/html
     depends_on:
